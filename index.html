@@ -8,44 +8,21 @@
     <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
 
     <style>
-        * {box-sizing: border-box;}
-        body {
-          background: linear-gradient(purple, white) no-repeat;
-          min-height: 100vh;
-          margin: 0;
-        }
-        .box {
-          background-image: url("https://s30.postimg.org/r1e86dtr5/border_image.png"), url("https://s30.postimg.org/r1e86dtr5/border_image.png");
+      .full-line {
+        border-image: linear-gradient(0deg, #1095c1 5px, #0000 0) fill 0//0 100vw 0 0;
+      }      
+      body {
+        background: linear-gradient(brown, #DEDEDE) no-repeat;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .box {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+      }
         
-          background-size: 288px 39px;
-          background-repeat: no-repeat;
-          background-position: center top, center bottom;
-        
-          padding: 40px 20px;
-          position: relative;
-          min-width: 300px;
-          height: 250px;
-          width: 500px;
-          margin: 20px;
-        }
-        .box:before,
-        .box:after {
-          border-radius: 10px 0 0 10px;
-          border: solid black;
-          border-width: 2px 0 2px 2px;
-          width: calc(50% - 142px);
-          position: absolute;
-          content: '';
-          bottom: 17px;
-          top: 19px;
-          left: 0;
-        }
-        .box:after {
-          border-radius: 0 10px 10px 0;
-          border-width: 2px 2px 2px 0;
-          left: auto;
-          right: 0;
-        }      
       df-messenger {
         z-index: 999;
         position: static;
@@ -63,6 +40,7 @@
   </head>
   <body>
     <img src="rulesnerd.png" class="box" />
+    <div class=".full-line">The Savage Soul - Rules Nerd</div>
 <df-messenger project-id="soul-rules-nerd" agent-id="e7f0f7a6-c10b-4a9e-85ee-80625873a114" language-code="en" max-query-length="-1"> <df-messenger-chat chat-title="Soul Rules Nerd"> </df-messenger-chat> </df-messenger>
   </body>
 </html>
